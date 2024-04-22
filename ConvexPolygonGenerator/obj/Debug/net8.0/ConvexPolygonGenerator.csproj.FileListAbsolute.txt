@@ -1,0 +1,11 @@
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\bin\Debug\net8.0\ConvexPolygonGenerator.deps.json
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\bin\Debug\net8.0\ConvexPolygonGenerator.dll
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\bin\Debug\net8.0\ConvexPolygonGenerator.pdb
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPolygonGenerator.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPolygonGenerator.AssemblyInfoInputs.cache
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPolygonGenerator.AssemblyInfo.cs
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPolygonGenerator.csproj.CoreCompileInputs.cache
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPolygonGenerator.dll
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\refint\ConvexPolygonGenerator.dll
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPolygonGenerator.pdb
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ref\ConvexPolygonGenerator.dll
