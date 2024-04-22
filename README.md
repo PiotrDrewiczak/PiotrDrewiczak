@@ -1,1 +1,1 @@
-# PiotrDrewiczak
+#Projekt pracy magisterskiej
