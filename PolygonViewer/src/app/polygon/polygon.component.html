@@ -1,0 +1,6 @@
+<select [(ngModel)]="selectedPolygonIndex" (change)="selectPolygon()">
+    <option *ngFor="let polygon of polygons; let i = index" [value]="i">Polygon {{i + 1}}</option>
+  </select>
+  
+  <canvas #canvas width="500" height="500"></canvas>
+  
