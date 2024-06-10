@@ -7,11 +7,13 @@ import { PolygonComponent } from './polygon/polygon.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PolygonService } from './polygon/service/polygon.service';
 import { FormsModule } from '@angular/forms';
+import { TopbarComponent } from './topbar/topbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PolygonComponent
+    PolygonComponent,
+    TopbarComponent,
   ],
   imports: [
     BrowserModule,

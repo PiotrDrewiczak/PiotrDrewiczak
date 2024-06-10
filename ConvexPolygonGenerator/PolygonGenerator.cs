@@ -1,51 +1,36 @@
 ﻿using ConvexPolygonGenerator.Models;
 
+
 namespace ConvexPolygonGenerator
 {
     public class PolygonGenerator
     {
-        private Random random;
-        public PolygonGenerator()
-        { 
-            random = new Random();
-        }
-        public List<List<Point>> GenerateConvexPolygon(int numberOfPolygons,int numberOfVertices)
+        private string _pythonPath;
+        private string _pythonScriptPath;
+        private string _polygonOutput;
+        private int _numberOfVertices;
+        private int _numberOfPolygons;
+
+        public PolygonGenerator(string pythonPath,string pythonScriptPath,string polygonOutput,int numberOfVertices,int numberOfPolygons)
         {
-            var polygon = new List<List<Point>>();
-            for (int j = 0; j < numberOfPolygons; j++)
-            {
-                double centerX = random.Next(300)+ 100;
-                double centerY = random.Next(100) + 100;
-                double radius = random.Next(100) + 100;
+           this._pythonPath = pythonPath;
+           this._pythonScriptPath = pythonScriptPath;
+           this._polygonOutput = polygonOutput;
+           this._numberOfVertices = numberOfVertices;
+           this._numberOfPolygons = numberOfPolygons;
+        }
 
-                var vertices = new List<Point>();
+        public List<List<Point>> GenerateConvexPolygon()
+        {
+            var polygonsList = PythonRunner.Generate(_pythonPath, _pythonScriptPath, _polygonOutput,_numberOfPolygons,_numberOfVertices);
 
-                // Generowanie nieregularnie rozłożonych wierzchołków na okręgu
-                for (int i = 0; i < numberOfVertices; i++)
-                {
-                    double angle = 2 * Math.PI * random.NextDouble(); // Losowy kąt
-                    double distance = Math.Sqrt(random.NextDouble()) * radius; // Losowa odległość
-                    double x = centerX + Math.Cos(angle) * distance; // Współrzędna x
-                    double y = centerY + Math.Sin(angle) * distance; // Współrzędna y
-                    vertices.Add(new Point(x, y));
-                }
-                // Sortowanie wierzchołków względem kąta
-                vertices.Sort((a, b) =>
-                {
-                    double angleA = Math.Atan2(a.Y - centerY, a.X - centerX);
-                    double angleB = Math.Atan2(b.Y - centerY, b.X - centerX);
-                    return angleA.CompareTo(angleB);
-                });
-
-                polygon.Add(vertices);
-            }
-            SavePolygonsToCSV(polygon, "polygons.csv");
-            return polygon;
+            SavePolygonsToCSV(polygonsList, "polygons.csv");
+            return polygonsList;
         }
 
         // Zapisywanie wierzchołków wielokątów do pliku CSV
 
-        public static void SavePolygonsToCSV(List<List<Point>> polygons, string filePath)
+        public void SavePolygonsToCSV(List<List<Point>> polygons, string filePath)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
             {

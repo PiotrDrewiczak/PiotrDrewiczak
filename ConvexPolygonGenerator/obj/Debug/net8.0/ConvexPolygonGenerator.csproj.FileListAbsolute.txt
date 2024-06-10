@@ -9,3 +9,5 @@ C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPo
 C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\refint\ConvexPolygonGenerator.dll
 C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPolygonGenerator.pdb
 C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ref\ConvexPolygonGenerator.dll
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPolygonGenerator.csproj.AssemblyReference.cache
+C:\Users\piotr\Desktop\Repo\mgr\ConvexPolygonGenerator\obj\Debug\net8.0\ConvexPolygonGenerator.sourcelink.json
