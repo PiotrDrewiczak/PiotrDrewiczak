@@ -20,11 +20,11 @@ namespace ConvexPolygonGenerator
            this._numberOfPolygons = numberOfPolygons;
         }
 
-        public List<List<Point>> GenerateConvexPolygon()
+        public PolygonAndRectangleResult GenerateConvexPolygon()
         {
             var polygonsList = PythonRunner.Generate(_pythonPath, _pythonScriptPath, _polygonOutput,_numberOfPolygons,_numberOfVertices);
 
-            SavePolygonsToCSV(polygonsList, "polygons.csv");
+            SavePolygonsToCSV(polygonsList.Polygons, "polygons.csv");
             return polygonsList;
         }
 

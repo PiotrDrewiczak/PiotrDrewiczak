@@ -6,7 +6,7 @@ namespace ConvexPolygonGenerator
 {
     internal static class PythonRunner
     {
-        public static List<List<Point>> Generate(string pythonPath, string pythonScriptPath, string polygonOutput,int numberOfVertices,int numberOfPolygons)
+        public static PolygonAndRectangleResult Generate(string pythonPath, string pythonScriptPath, string polygonOutput,int numberOfVertices,int numberOfPolygons)
         {
 
             // Uruchom skrypt Pythonowy
@@ -37,26 +37,32 @@ namespace ConvexPolygonGenerator
                 process.WaitForExit();
             }
 
-            var polygons = new List<List<Point>>();
+            var polyResult = new PolygonAndRectangleResult();
 
             try
             {
                 string json = File.ReadAllText(polygonOutput);
-                // Deserializuj zawartość pliku JSON jako tablicę obiektów Point
-                List<List<List<double>>> polygonPointsList = JsonConvert.DeserializeObject<List<List<List<double>>>>(json);
+                dynamic data = JsonConvert.DeserializeObject<dynamic>(json);
 
-                // Zmapuj listę list double na listę obiektów Point
-                polygons = polygonPointsList
-                  .Select(polygonPoints => polygonPoints
-                      .Select(pointList => new Point(pointList[0], pointList[1]))
-                      .ToList())
-                  .ToList();
+                // Deserializuj wielokąty
+                List<List<List<double>>> polygonPointsList = data.polygons.ToObject<List<List<List<double>>>>();
+                polyResult.Polygons = polygonPointsList
+                    .Select(polygonPoints => polygonPoints
+                        .Select(pointList => new Point(pointList[0], pointList[1]))
+                        .ToList())
+                    .ToList();
+
+                // Deserializuj prostokąty
+                List<List<int>> rectangleList = data.rectangles.ToObject<List<List<int>>>();
+                polyResult.Rectangles = rectangleList
+                    .Select(rect => new Rectangle(rect[0], rect[1], rect[2], rect[3]))
+                    .ToList();
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Wystąpił błąd przy odczycie pliku: {ex.Message}");
             }
-            return polygons;
+            return polyResult;
         }
     }
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConvexPolygonGenerator")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94bc28dfb18d8cc9547afdf878f4c0981a962d01")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConvexPolygonGenerator")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConvexPolygonGenerator")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

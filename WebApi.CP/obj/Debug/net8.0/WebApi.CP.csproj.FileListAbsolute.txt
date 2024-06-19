@@ -34,4 +34,3 @@ C:\Users\piotr\Desktop\Repo\mgr\WebApi.CP\obj\Debug\net8.0\WebApi.CP.genruntimec
 C:\Users\piotr\Desktop\Repo\mgr\WebApi.CP\obj\Debug\net8.0\ref\WebApi.CP.dll
 C:\Users\piotr\Desktop\Repo\mgr\WebApi.CP\bin\Debug\net8.0\Newtonsoft.Json.dll
 C:\Users\piotr\Desktop\Repo\mgr\WebApi.CP\obj\Debug\net8.0\WebApi.CP.sourcelink.json
-C:\Users\piotr\Desktop\Repo\mgr\WebApi.CP\bin\Debug\net8.0\polygon_output.json

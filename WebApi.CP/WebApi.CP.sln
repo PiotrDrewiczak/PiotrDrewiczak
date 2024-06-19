@@ -5,7 +5,7 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.CP", "WebApi.CP.csproj", "{BA4A5045-C8F6-4026-B4B7-45E302BAE843}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvexPolygonGenerator", "..\ConvexPolygonGenerator\ConvexPolygonGenerator.csproj", "{18DF8F62-436D-489C-8D9D-E9B7B7256897}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConvexPolygonGenerator", "..\ConvexPolygonGenerator\ConvexPolygonGenerator.csproj", "{18DF8F62-436D-489C-8D9D-E9B7B7256897}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

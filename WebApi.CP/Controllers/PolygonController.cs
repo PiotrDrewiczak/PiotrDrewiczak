@@ -18,7 +18,7 @@ namespace WebApi.CP.Controllers
         }
 
         [HttpGet(Name = "GetPolygons")]
-        public List<List<Point>> GetPolygons()
+        public PolygonAndRectangleResult GetPolygons()
         {
             PolygonGenerator generator = new PolygonGenerator(
                 settings.Value.PythonPath,
@@ -28,10 +28,9 @@ namespace WebApi.CP.Controllers
                 settings.Value.NumberOfPolygons
                 );
 
-            
-            var list = generator.GenerateConvexPolygon();
+            var polygonList = generator.GenerateConvexPolygon();
 
-            return list;
+            return polygonList;
         }
     }
 }
